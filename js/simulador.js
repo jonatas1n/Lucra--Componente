@@ -36,7 +36,7 @@ function calculateSimulation() {
     const valorFinalLucra = calculateFinalValue(valor, jurosFinalLucra);
     
     updateDisplay(".output.lucra .display_value", `R$ ${valorFinalLucra.toFixed(2)}`);
-    updateDisplay(".output.lucra .tax", `Taxa: ${(jurosFinalLucra * 100).toFixed(3)}%`);
+    updateDisplay(".output.lucra .tax", `Taxa: ${(Math.abs(jurosFinalLucra) * 100).toFixed(3)}%`);
 
     document.querySelectorAll(".output .little").forEach(element => {
         element.textContent = modo ? "O comprador vai pagar" : "O vendedor vai receber";
@@ -49,7 +49,7 @@ function calculateSimulation() {
     const valorFinalConcorrencia = calculateFinalValue(valor, jurosFinalConcorrencia);
     
     updateDisplay(".output.concorrencia .display_value", `R$ ${valorFinalConcorrencia.toFixed(2)}`);
-    updateDisplay(".output.concorrencia .tax", `Taxa: ${(jurosFinalConcorrencia * 100).toFixed(3)}%`);
+    updateDisplay(".output.concorrencia .tax", `Taxa: ${(Math.abs(jurosFinalConcorrencia) * 100).toFixed(3)}%`);
     
     const difference = valorFinalLucra - valorFinalConcorrencia;
     updateDisplay(".value", `${modo ? '-' : '+'} R$ ${Math.abs(difference.toFixed(2))}`);
