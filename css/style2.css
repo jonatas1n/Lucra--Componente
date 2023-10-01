@@ -1,0 +1,168 @@
+:root {
+    --main-color: #FFDA58;
+    --border-color: #0019311D;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 5rem;
+    background: black;
+}
+
+.container {
+    width: 80%;
+    max-width: 1366px;
+    margin-inline: auto;
+}
+
+#simulador {
+    display: grid;
+    background: white;
+    grid-template-columns: .75fr .75fr .7fr 1fr;
+    gap: 1.5rem;
+    transition: .25s;
+    padding: 3.5rem;
+    border: 3px solid var(--main-color);
+    border-radius: 1.125rem;
+}
+
+.coluna {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 1rem;
+    
+}
+
+.coluna.second {
+    border-right: 1px dashed var(--border-color);
+    padding-right: 1.5rem;
+}
+
+.input-field {
+    font-size: 1.25rem;
+    display: grid;
+    grid-gap: .5rem;
+}
+
+.input-field label {
+    font-size: .75rem;
+    font-weight: bold;
+    margin-left: .75rem;
+}
+
+.input-field :is(select, input) {
+    padding: 1rem .75rem;
+    border-radius: .5rem;
+    font-size: .875rem;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-field .radio-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    padding: 1rem .75rem;
+}
+
+.input-field .radio-input label {
+    font-size: .875rem;
+    font-weight: 700;
+    margin-left: 0;
+    display: flex;
+    gap: .25rem;
+}
+
+.output {
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+}
+
+#output-title {
+    margin: 0;
+    line-height: 1.125rem;
+    font-weight: 900;
+}
+
+.output .little {
+    font-size: 1.125rem;
+}
+
+.output .display_value {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.output .tax {
+    font-size: .75rem;
+}
+
+.lucra {
+    background: var(--main-color);
+    color: black;
+}
+
+.concorrencia {
+    color: #666;
+    
+}
+
+#call_to_action {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding-inline: 2rem;
+}
+
+#call_to_action .call_text {
+    text-transform: uppercase;
+}
+
+#call_to_action .value {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-top: .375rem;
+    color: var(--main-color);
+    text-shadow: 
+       1px 0px 0px black,   /* Right shadow */
+       -1px 0px 0px black,  /* Left shadow */
+       0px 1px 0px black,   /* Bottom shadow */
+    0px -1px 0px black;
+}
+
+#call_to_action .slogan {
+    font-size: .75rem;
+    margin-top: -1rem;
+}
+
+#call_to_action .difference {
+    font-size: 1rem;
+    margin-block: .75rem;
+}
+
+#call_to_action button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 100vmax;
+    border: black 2px solid;
+    background: var(--main-color);
+    cursor: pointer;
+    transition: .25s;
+}
+
+#call_to_action button:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.hide {
+    visibility: hidden;
+}

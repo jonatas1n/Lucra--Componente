@@ -3,105 +3,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador Lucra+</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <div class="container">
         <div id="simulador">
-            <div class="input-field">
-                <label for="plano">Selecione o seu plano</label>
-                <select id="plano" name="plano">
-                    <option value="0">D0 - <small>Receba no mesmo dia</small></option>
-                    <option value="1">D+1  - <small>Receba em um dia útil</small></option>
-                </select>
+            <div class="coluna">
+                <div class="input-field">
+                    <label for="plano">Selecione o seu plano</label>
+                    <select id="plano" name="plano">
+                        <option value="0">D0 - <small>Receba no mesmo dia</small></option>
+                        <option value="1">D+1  - <small>Receba em um dia útil</small></option>
+                    </select>
+                </div>
+                <div class="input-field checkbox">
+                    <label>Modo de cobrança</label>
+                    <div class="radio-input">
+                        <label for="modo">
+                            <input id="modo" name="modo" type="checkbox"> Repassar os juros para o cliente
+                        </label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="receber">Valor a ser pago</label>
+                    <input type="number" step="0.01" id="receber" value="1000" name="receber">
+                </div>
             </div>
-            <div class="input-field">
-                <label for="bandeira">Bandeira do Cartão</label>
-                <select id="bandeira" name="bandeira">
-                    <option value="Visa_Master">Visa/Mastercard</option>
-                    <option value="Elo_Hipercard_Amex_Outras">Elo/Hipercard/Amex/Outras</option>
-                </select>
+            <div class="coluna second">
+                <div class="input-field">
+                    <label>Bandeira do Cartão</label>
+                    <div class="radio-input">
+                        <label for="visa">
+                            <input type="radio" name="bandeira" checked id="visa" value="visa">
+                            Visa e Master
+                        </label>
+                        <label for="outros">
+                            <input type="radio" id="outros" name="bandeira" value="outros">
+                            Outros
+                        </label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="parcelas">Quant. de Parcelas</label>
+                    <select id="parcelas" name="parcelas">
+                        <option value="0">Débito</option>
+                        <option value="1">1x</option>
+                        <option value="2">2x</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x</option>
+                        <option value="5">5x</option>
+                        <option value="6">6x</option>
+                        <option value="7">7x</option>
+                        <option value="8">8x</option>
+                        <option value="9">9x</option>
+                        <option value="10">10x</option>
+                        <option value="11">11x</option>
+                        <option value="12">12x</option>
+                        <option value="13">13x</option>
+                        <option value="14">14x</option>
+                        <option value="15">15x</option>
+                        <option value="16">16x</option>
+                        <option value="17">17x</option>
+                        <option value="18">18x</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="retorno">Retorno Financeiro <b>(R)</b></label>
+                    <select id="retorno" name="retorno">
+                        <option value="0">R0</option>
+                        <option value="1">R1</option>
+                        <option value="2">R2</option>
+                        <option value="3">R3</option>
+                        <option value="4">R4</option>
+                        <option value="5">R5</option>
+                        <option value="6">R6</option>
+                        <option value="7">R7</option>
+                        <option value="8">R8</option>
+                        <option value="9">R9</option>
+                        <option value="10">R10</option>
+                        <option value="11">R11</option>
+                        <option value="12">R12</option>
+                        <option value="13">R13</option>
+                        <option value="14">R14</option>
+                        <option value="15">R15</option>
+                        <option value="16">R16</option>
+                        <option value="17">R17</option>
+                        <option value="18">R18</option>
+                    </select>
+                </div>
             </div>
-            <div class="input-field checkbox">
-                <label for="modo">
-                    <input id="modo" name="modo" type="checkbox"> Repassar os juros para o cliente
-                </label>
-            </div>
-            <div class="input-field">
-                <label for="parcelas">Quant. de Parcelas</label>
-                <select id="parcelas" name="parcelas">
-                    <option value="0">Débito</option>
-                    <option value="1">1x</option>
-                    <option value="2">2x</option>
-                    <option value="3">3x</option>
-                    <option value="4">4x</option>
-                    <option value="5">5x</option>
-                    <option value="6">6x</option>
-                    <option value="7">7x</option>
-                    <option value="8">8x</option>
-                    <option value="9">9x</option>
-                    <option value="10">10x</option>
-                    <option value="11">11x</option>
-                    <option value="12">12x</option>
-                    <option value="13">13x</option>
-                    <option value="14">14x</option>
-                    <option value="15">15x</option>
-                    <option value="16">16x</option>
-                    <option value="17">17x</option>
-                    <option value="18">18x</option>
-                </select>
-            </div>
-            <div class="input-field">
-                <label for="receber">Valor a ser pago</label>
-                <input id="receber" value="1000" name="receber">
-            </div>
-            <div class="input-field">
-                <label for="retorno">Retorno Financeiro <b>(R)</b></label>
-                <select id="retorno" name="retorno">
-                    <option value="0">R0</option>
-                    <option value="1">R1</option>
-                    <option value="2">R2</option>
-                    <option value="3">R3</option>
-                    <option value="4">R4</option>
-                    <option value="5">R5</option>
-                    <option value="6">R6</option>
-                    <option value="7">R7</option>
-                    <option value="8">R8</option>
-                    <option value="9">R9</option>
-                    <option value="10">R10</option>
-                    <option value="11">R11</option>
-                    <option value="12">R12</option>
-                    <option value="13">R13</option>
-                    <option value="14">R14</option>
-                    <option value="15">R15</option>
-                    <option value="16">R16</option>
-                    <option value="17">R17</option>
-                    <option value="18">R18</option>
-                </select>
-            </div>
-            <div class="output-container">
+            <div class="coluna">
+                <h2 id="output-title"></h2>
                 <div class="output lucra">
                     COM A LUCRA+
-                    <div class="little">O comprador vai pagar:</div>
                     <div class="display_value">R$ 969,28</div>
-                    <div class="tax">Taxa: 3,072%</div>
+                    <div class="tax">Taxa Lucra+: <span>4,999%</span>%</div>
                 </div>
                 <div class="output concorrencia">
                     Concorrência
-                    <div class="little">O comprador vai pagar:</div>
                     <div class="display_value">R$ 950,01</div>
-                    <div class="tax">Taxa: 4,999%</div>
+                    <div class="tax">Taxa média do mercado: <span>4,999</span>%</div>
                 </div>
             </div>
-            <div id="call_to_action">
+            <div class="coluna" id="call_to_action">
                 <div class="call_text"></div>
                 <div class="value">+ R$ 19,27</div>
-                <div class="difference">ESSA É A DIFRENÇA DE TRABALHAR COM A LUCRA+</div>
-                <a href="https://wa.me/5551998116453?text=Como faço pra adquirirar uma maquininha e lucrar+"><button>Lucrar mais agora</button></a>
+                <div class="slogan">Taxa menor = Cliente satisfeito</div>
+                <div class="difference">Essa é a diferença entre a Lucra+ e as outras maquininhas.</div>
+                <a href="https://wa.me/5551998116453?text=Como faço pra adquirirar uma maquininha e lucrar+">
+                    <button>Clique e venha lucrar mais agora</button>
+                </a>
             </div>
         </div>
     </div>
-    <script src="js/data.js"></script>
-    <script src="js/simulador.js"></script>
+    <script src="js/data2.js"></script>
+    <script src="js/simulador2.js"></script>
 </body>
 </html>
