@@ -152,6 +152,7 @@ body {
 #call_to_action .slogan {
     font-size: .75rem;
     margin-top: -1rem;
+    margin-bottom: -1rem;
 }
 
 #call_to_action .difference {
@@ -250,12 +251,17 @@ small {
         border-top: 1px dashed var(--border-color);
         padding-top: 2rem;
     }
+
+    #call_to_action .value {
+        font-size: 3.5rem;
+    }
 }
 
 @media screen and (max-width: 750px) {
     .side-right, .side-left {
         grid-auto-flow: row;
         grid-template-columns: unset;
+        gap: 3rem;
     }
 
     small {
