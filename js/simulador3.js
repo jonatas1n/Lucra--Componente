@@ -24,8 +24,7 @@ function calculateFinalValue(valor, jurosFinal) {
 // Main calculation and display logic
 function calculateSimulation() {
     const parcelas = parseInt(document.getElementById("parcelas").value);
-    const bandeirasList = Array.from(document.getElementsByName("bandeira"));
-    const bandeira = bandeirasList.find(b => b.checked == true).value;
+    const bandeira = document.getElementById('bandeira').value;
     const valor = parseFloat(document.getElementById("receber").value);
     const modo = document.getElementById("modo").checked;
     const retorno = modo ? parseFloat(document.getElementById("retorno").value) : 0;
@@ -38,7 +37,7 @@ function calculateSimulation() {
     const valorFinalLucra = calculateFinalValue(valor, jurosFinalLucra);
     
     updateDisplay(".output.lucra .display_value", `R$ ${valorFinalLucra.toFixed(2)}`);
-    updateDisplay(".output.lucra .tax span", (Math.abs(jurosFinalLucra) * 100).toFixed(3));
+    updateDisplay(".output.lucra .tax span.val", (Math.abs(jurosFinalLucra) * 100).toFixed(3));
 
     document.querySelector("#output-title").textContent = modo
         ? "O cliente paga"
@@ -53,7 +52,7 @@ function calculateSimulation() {
     const valorFinalConcorrencia = calculateFinalValue(valor, jurosFinalConcorrencia);
     
     updateDisplay(".output.concorrencia .display_value", `R$ ${valorFinalConcorrencia.toFixed(2)}`);
-    updateDisplay(".output.concorrencia .tax span", (Math.abs(jurosFinalConcorrencia) * 100).toFixed(3));
+    updateDisplay(".output.concorrencia .tax span.val", (Math.abs(jurosFinalConcorrencia) * 100).toFixed(3));
     
     const difference = valorFinalLucra - valorFinalConcorrencia;
     updateDisplay(".value", `${modo ? '-' : '+'} R$ ${Math.abs(difference.toFixed(2))}`);
