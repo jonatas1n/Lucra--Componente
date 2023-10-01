@@ -19,7 +19,7 @@ body {
     display: grid;
     background: white;
     grid-template-columns: .75fr .75fr .7fr 1fr;
-    gap: 1.5rem;
+    grid-column-gap: 1.5rem;
     transition: .25s;
     padding: 3.5rem;
     border: 3px solid var(--main-color);
@@ -165,4 +165,52 @@ body {
 
 .hide {
     visibility: hidden;
+}
+
+small {
+    font-size: .75rem;
+    color: #333;
+    margin-left: .75rem;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    z-index: 900;
+    margin-left: .5rem;
+}
+
+.tooltip-trigger {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-icon {
+    width: .75rem;
+    height: auto;
+    display: inline;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: -.125rem;
+}
+
+.tooltip-content {
+    position: absolute;
+    background-color: #000000d9;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    display: none;
+    color: white;
+    font-weight: 500;
+    min-width: 200px;
+    border-radius: .5rem;
+    top: 30px; /* Adjust the positioning as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .875rem;
+}
+
+.tooltip-container:hover .tooltip-content {
+    display: block;
 }

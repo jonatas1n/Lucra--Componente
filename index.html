@@ -20,7 +20,17 @@
                     </select>
                 </div>
                 <div class="input-field checkbox">
-                    <label>Modo de cobrança</label>
+                    <label>
+                        Modo de cobrança
+                        <div class="tooltip-container">
+                            <div class="tooltip-trigger">
+                                <img class="tooltip-icon" src="assets/circle.svg">
+                            </div>
+                            <div class="tooltip-content">
+                                Marcando essa caixa, o cliente arca com o juros da venda.
+                            </div>
+                        </div>
+                    </label>
                     <div class="radio-input">
                         <label for="modo">
                             <input id="modo" name="modo" type="checkbox"> Repassar os juros para o cliente
@@ -71,7 +81,18 @@
                     </select>
                 </div>
                 <div class="input-field">
-                    <label for="retorno">Retorno Financeiro <b>(R)</b></label>
+                    <label for="retorno">
+                        Retorno Financeiro <b>(R)</b>
+                        <div class="tooltip-container">
+                            <div class="tooltip-trigger">
+                                <img class="tooltip-icon" src="assets/circle.svg">
+                            </div>
+                            <div class="tooltip-content">
+                                <strong>(Indicado para Revenda de Veículos e Despachantes)</strong> <br>
+                                Aplicando retorno, o valor final da venda aumenta. O vendedor recebe o valor integral com retorno financeiro aplicado.
+                            </div>
+                        </div>
+                    </label>
                     <select id="retorno" name="retorno">
                         <option value="0">R0</option>
                         <option value="1">R1</option>
@@ -117,6 +138,7 @@
                     <button>Clique e venha lucrar mais agora</button>
                 </a>
             </div>
+            <small>Recebe o valor integral</small>
         </div>
     </div>
     <script src="js/data2.js"></script>
