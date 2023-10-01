@@ -167,6 +167,7 @@ body {
     border-radius: 100vmax;
     border: black 2px solid;
     background: var(--main-color);
+    font-family: 'Nunito Sans', sans-serif;
     cursor: pointer;
     transition: .25s;
 }
@@ -259,6 +260,10 @@ small {
 
     .container {
         width: 90%;
+    }
+
+    .tooltip-container.active .tooltip-content {
+        display: block;
     }
 }
 
