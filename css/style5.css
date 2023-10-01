@@ -245,6 +245,7 @@ small {
     #simulador {
         grid-auto-flow: row;
         gap: 2rem;
+        padding: 2rem .75rem;
     }
 
     .side-right {
@@ -253,7 +254,11 @@ small {
     }
 
     #call_to_action .value {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 90%;
     }
 }
 
