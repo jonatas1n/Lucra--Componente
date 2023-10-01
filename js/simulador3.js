@@ -1,7 +1,7 @@
 const TAX_FACTOR = 1.62727;
 
 function getJurosFinal(concorrencia, modo, retorno, bandeira, parcelas, plano) {
-    let tax = taxas[plano][bandeira][parcelas];
+    let tax = taxas[plano][bandeira][retorno][parcelas];
     
     if (concorrencia) {
         tax *= TAX_FACTOR;
